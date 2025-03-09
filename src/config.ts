@@ -1,12 +1,12 @@
 import type { SocialObjects } from "@/lib/types";
 
 export const SITE = {
-  website: "https://wayanadiitm.github.io", // replace this with your deployed domain
+  website: "https://wayanadiitm.github.io/round1/", // replace this with your deployed domain
   author: "Somsubhra",
   desc: "Hands-on Round for LogicLooM Finale edition",
   title: "Round-1",
-  ogImage: "og-image.jpg",
-  repo: "https://github.com/HYP3R00T/CelestialDocs",
+  ogImage: "/round1/og-image.jpg",
+  repo: "",
 };
 
 export const LOCALE = {
@@ -42,7 +42,7 @@ export const docconfig = {
   hide_time: true,
   hide_search: false,
   hide_repo_button: false,
-  hide_author: true,
+  hide_author: false,
 };
 
 // Set your social. It will appear in footer. Don't change the `name` value.
@@ -51,7 +51,7 @@ export const Socials: SocialObjects = [
     name: "Github",
     href: "https://github.com/HYP3R00T/",
     linkTitle: ` ${SITE.title} on Github`,
-    active: true,
+    active: false,
   },
   {
     name: "Facebook",
@@ -73,7 +73,7 @@ export const Socials: SocialObjects = [
   },
   {
     name: "Mail",
-    href: "mailto:rajesh@hyperoot.dev",
+    href: "mailto:logicloom@ds.study.iitm.ac.in",
     linkTitle: `Send an email to ${SITE.title}`,
     active: true,
   },
@@ -97,9 +97,9 @@ export const Socials: SocialObjects = [
   },
   {
     name: "WhatsApp",
-    href: "https://github.com/HYP3R00T/",
+    href: "https://whatsapp.com",
     linkTitle: `${SITE.title} on WhatsApp`,
-    active: false,
+    active: true,
   },
   {
     name: "Snapchat",
@@ -141,6 +141,6 @@ export const Socials: SocialObjects = [
     name: "Mastodon",
     href: "https://mastodon.social/@hyp3r00t",
     linkTitle: `${SITE.title} on Mastodon`,
-    active: true,
+    active: false,
   },
 ];
