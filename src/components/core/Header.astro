@@ -23,19 +23,19 @@ const { class: className } = Astro.props;
     class="flex space-x-4 justify-between items-center md:items-center md:space-x-0 md:max-w-8xl"
   >
     <div class="font-bold flex flex-row items-center">
-      <a href="/" class="px-4 hidden md:flex no-underline">
+      <a href="/round1/" class="px-4 hidden md:flex no-underline">
         <Button
           client:load
           className="flex gap-2 hover:no-underline text-2xl"
           variant="link"
         >
-          <img src="/logo.svg" alt="Logo" class="w-[2rem] h-[2rem]" />
+          <img src="/round1/logo.svg" alt="Logo" class="w-[2rem] h-[2rem]" />
           {SITE.title}
         </Button>
       </a>
-      <a href="/" class="px-4 flex md:hidden">
+      <a href="/round1/" class="px-4 flex md:hidden">
         <Button client:load className="" variant="ghost" size="icon">
-          <img src="/logo.svg" alt="Logo" class="w-[2rem] h-[2rem]" />
+          <img src="/round1/logo.svg" alt="Logo" class="w-[2rem] h-[2rem]" />
         </Button>
       </a>
       <div class="hidden md:block">
@@ -66,7 +66,7 @@ const { class: className } = Astro.props;
   </div>
 </header>
 
-<script is:inline>
+<!--<script is:inline>
   function setDarkMode(document) {
     const getThemePreference = () => {
       if (
@@ -79,6 +79,41 @@ const { class: className } = Astro.props;
         ? "dark"
         : "theme-light";
     };
+    const isDark = getThemePreference() === "dark";
+    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+    if (typeof localStorage !== "undefined") {
+      const observer = new MutationObserver(() => {
+        const isDark = document.documentElement.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "theme-light");
+      });
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    }
+  }
+
+  setDarkMode(document);
+
+  document.addEventListener("astro:before-swap", (ev) => {
+    // Pass the incoming document to set the theme on it
+    setDarkMode(ev.newDocument);
+  });
+</script>-->
+<script is:inline>
+  function setDarkMode(document) {
+    const getThemePreference = () => {
+      if (
+        typeof localStorage !== "undefined" &&
+        localStorage.getItem("theme")
+      ) {
+        return localStorage.getItem("theme");
+      }
+      // Default to dark mode if no saved theme preference
+      return "dark";
+    };
+    
     const isDark = getThemePreference() === "dark";
     document.documentElement.classList[isDark ? "add" : "remove"]("dark");
 
