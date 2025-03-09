@@ -19,12 +19,12 @@ const { class: className } = Astro.props;
           : capitalizeFirstLetter(item.slug.split("/").pop() || "");
         const className = `
         ${level === 0 ? "font-semibold" : "text-muted-foreground"}
-        ${pathname === "/" + item.slug ? "text-primary" : "no-underline"}
+        ${pathname === "/round1/" + item.slug ? "text-primary" : "no-underline"}
         `.trim();
         return (
           <li class="w-full">
             <a
-              href={`/${item.slug}`}
+              href={`/round1/${item.slug}`}
               class={`${className}  text-sm leading-none w-full`}
             >
               {label}
