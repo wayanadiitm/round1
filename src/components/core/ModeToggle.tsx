@@ -12,8 +12,8 @@ import { Moon, Sun } from "lucide-react";
 
 export function ModeToggle() {
   const [theme, setThemeState] = React.useState<
-    "dark" | "theme-light" | "system"
-  >("dark");
+    "theme-light" | "dark" | "system"
+  >("theme-light");
 
   React.useEffect(() => {
     const isDarkMode = document.documentElement.classList.contains("dark");
