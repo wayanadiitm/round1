@@ -1,7 +1,7 @@
 import type { SocialObjects } from "@/lib/types";
 
 export const SITE = {
-  website: "https://wayanadiitm.github.io/round1/", // replace this with your deployed domain
+  website: "https://wayanadiitm.github.io", // replace this with your deployed domain
   author: "Somsubhra",
   desc: "Hands-on Round for LogicLooM Finale edition",
   title: "Round-1",
