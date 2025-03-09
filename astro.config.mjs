@@ -6,7 +6,8 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://wayanadiitm.github.io/round1/",
+  ite: 'https://wayanadiitm.github.io',
+  base: 'round1',
   markdown: {
     smartypants: true,
     syntaxHighlight: "shiki",
