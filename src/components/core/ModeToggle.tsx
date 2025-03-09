@@ -12,7 +12,7 @@ import { Moon, Sun } from "lucide-react";
 
 export function ModeToggle() {
   const [theme, setThemeState] = React.useState<
-    "theme-light" | "dark" | "system"
+    "dark" | "theme-light" | "system"
   >("dark");
 
   React.useEffect(() => {
