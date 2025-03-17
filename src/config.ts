@@ -3,8 +3,8 @@ import type { SocialObjects } from "@/lib/types";
 export const SITE = {
   website: "https://wayanadiitm.github.io", // replace this with your deployed domain
   author: "Somsubhra",
-  desc: "Hands-on Round for LogicLooM Finale edition",
-  title: "Round-1",
+  desc: "Documentation Guide for LogicLooM 4.0 Finale edition",
+  title: "LogicLooM Docs",
   ogImage: "/round1/og-image.jpg",
   repo: "",
 };
