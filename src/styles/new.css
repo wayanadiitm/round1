@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.image {
+  flex: 1;
+}
+
+.text {
+  flex: 2;
+}
+
+img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
